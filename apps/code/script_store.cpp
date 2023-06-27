@@ -14,6 +14,7 @@ constexpr char ScriptStore::k_defaultScriptName[];
 
 ScriptStore::ScriptStore()
 {
+  addScriptFromTemplate(ScriptTemplate::UartChat());
   addScriptFromTemplate(ScriptTemplate::Factorial());
   addScriptFromTemplate(ScriptTemplate::Mandelbrot());
   addScriptFromTemplate(ScriptTemplate::Polynomial());

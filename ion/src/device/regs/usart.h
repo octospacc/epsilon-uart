@@ -32,6 +32,7 @@ public:
     REGS_BOOL_FIELD(UE, 13);
     REGS_BOOL_FIELD(TE, 3);
     REGS_BOOL_FIELD(RE, 2);
+    REGS_BOOL_FIELD(RXNEIE, 5);
   };
 
   constexpr USART(int i) : m_index(i) {}
@@ -42,7 +43,7 @@ public:
   REGS_REGISTER_AT(CR1, 0x0C);
 private:
   constexpr uint32_t Base() const {
-    return ((uint32_t []){0x40011000, 0x40004400, 0x40004800})[m_index-1];
+    return ((uint32_t []){0x40011000, 0x40004400, 0x40004800, 0, 0, 0x40011400})[m_index-1];
   };
   int m_index;
 };

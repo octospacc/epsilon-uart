@@ -6,6 +6,7 @@ namespace Console {
 
 void writeChar(char c);
 char readChar();
+bool readCharNonblocking(char * dest);
 
 // The lines are NULL-terminated
 void writeLine(const char * line);

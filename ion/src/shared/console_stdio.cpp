@@ -13,5 +13,9 @@ void writeChar(char c) {
   fflush(stdout);
 }
 
+bool readCharNonblocking(char * dest) {
+  return false;
+}
+
 }
 }

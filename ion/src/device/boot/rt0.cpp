@@ -6,7 +6,6 @@ extern "C" {
 #include <ion.h>
 #include "../device.h"
 #include "../console.h"
-#include "../ring_buffer.h"
 
 typedef void (*cxx_constructor)();
 
@@ -27,15 +26,6 @@ void abort() {
 #else
   Ion::reset();
 #endif
-}
-
-volatile RingBuffer<char, 1024> usart6_rx_buffer;
-void ISR_USART6() {
-  if (USART(6).SR()->getRXNE()) {
-    // Handle RXNE
-    char c = (char)USART(6).DR()->get();
-    usart6_rx_buffer.push(c);
-  }
 }
 
 void start() {

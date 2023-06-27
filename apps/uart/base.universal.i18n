@@ -1,8 +1,0 @@
-UartApp = "UART"
-UartAppCapital = "UART"
-UartOverUsb = "UART over USB"
-UartUnavailable = "Platform not supported"
-UartPinout = "TX: D-, RX: D+"
-UartMonitor = "Monitor"
-USART3EN = "USART3EN"
-USART6EN = "USART6EN"

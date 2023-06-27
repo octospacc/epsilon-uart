@@ -4,6 +4,4 @@
 void start();
 void abort();
 
-void ISR_USART6();
-
 #endif

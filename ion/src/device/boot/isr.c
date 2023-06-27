@@ -99,7 +99,7 @@ ISR InitialisationVector[INITIALISATION_VECTOR_SIZE]
   0, // DMA2 Stream5 global interrupts
   0, // DMA2 Stream6 global interrupt
   0, // DMA2 Stream7 global interrupt
-  ISR_USART6, // USART6 global interrupt
+  0, // USART6 global interrupt
   0, // I2C3 event interrupt
   0, // I2C3 error interrupt
   0, // ?
